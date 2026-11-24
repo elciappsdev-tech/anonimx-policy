@@ -3,74 +3,318 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AnonimX - Gizlilik Politikası ve Hesap Silme</title>
+  <title>AnonimX - Gizlilik Politikası, Çocuk Güvenliği Standartları & Hesap Silme</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1e293b; max-width: 800px; margin: 0 auto; padding: 24px; background-color: #f8fafc; }
-    .card { background: #ffffff; border-radius: 12px; padding: 32px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); margin-bottom: 24px; }
-    h1 { color: #0f172a; font-size: 26px; border-bottom: 2px solid #e2e8f0; padding-bottom: 12px; }
-    h2 { color: #0284c7; font-size: 20px; margin-top: 24px; }
-    ul { padding-left: 20px; }
-    li { margin-bottom: 8px; }
-    .highlight { background-color: #e0f2fe; padding: 12px 16px; border-left: 4px solid #0284c7; border-radius: 4px; margin: 16px 0; }
-    .btn { display: inline-block; background-color: #0284c7; color: #ffffff; padding: 14px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 12px; transition: background 0.2s; }
-    .btn:hover { background-color: #0369a1; }
-    .btn-danger { background-color: #ef4444; }
-    .btn-danger:hover { background-color: #dc2626; }
+    :root {
+      --primary: #0284c7;
+      --primary-hover: #0369a1;
+      --danger: #dc2626;
+      --danger-bg: #fef2f2;
+      --dark: #0f172a;
+      --text: #1e293b;
+      --muted: #64748b;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      color: var(--text);
+      background-color: var(--bg);
+      margin: 0;
+      padding: 24px 16px;
+    }
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .nav-links {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .nav-link {
+      color: #0284c7;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 8px 14px;
+      background: #ffffff;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .nav-link:hover {
+      background: #f1f5f9;
+    }
+    .nav-link.active {
+      background: #0284c7;
+      color: #ffffff;
+      border-color: #0284c7;
+    }
+    .header-card {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #ffffff;
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+    .header-card h1 {
+      margin: 0 0 12px 0;
+      font-size: 28px;
+      line-height: 1.3;
+      color: #ffffff;
+    }
+    .header-meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      font-size: 14px;
+    }
+    .header-meta div span {
+      color: #94a3b8;
+      display: block;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    .header-meta div strong {
+      color: #f8fafc;
+      font-size: 15px;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 14px;
+      padding: 32px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+      margin-bottom: 24px;
+      border: 1px solid var(--border);
+    }
+    h2 {
+      color: var(--dark);
+      font-size: 22px;
+      margin-top: 0;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    h3 {
+      color: #0369a1;
+      font-size: 18px;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+    p, li {
+      color: #334155;
+      font-size: 15px;
+    }
+    ul {
+      padding-left: 24px;
+      margin-bottom: 16px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .alert-danger {
+      background-color: var(--danger-bg);
+      border-left: 5px solid var(--danger);
+      padding: 16px 20px;
+      border-radius: 6px;
+      margin: 16px 0;
+      color: #991b1b;
+    }
+    .alert-danger strong {
+      color: #7f1d1d;
+    }
+    .highlight {
+      background-color: #f0f9ff;
+      padding: 16px 20px;
+      border-left: 4px solid var(--primary);
+      border-radius: 6px;
+      margin: 16px 0;
+    }
+    .contact-box {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 16px;
+    }
+    .contact-item {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+    .contact-item strong {
+      color: #0f172a;
+      min-width: 140px;
+      display: inline-block;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--primary);
+      color: #ffffff;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+    .btn:hover { background-color: var(--primary-hover); }
+    .btn-danger { background-color: var(--danger); }
+    .btn-danger:hover { background-color: #b91c1c; }
     .btn-group { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
-    .footer { text-align: center; font-size: 13px; color: #64748b; margin-top: 32px; padding-bottom: 20px; }
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 40px;
+      padding-bottom: 30px;
+    }
   </style>
 </head>
 <body>
 
-  <div class="card">
-    <h1>AnonimX Gizlilik Politikası</h1>
-    <p><strong>Son Güncelleme:</strong> 30 Eylül 2026</p>
-    <p>AnonimX geliştirici ekibi ("biz") olarak kullanıcılarımızın gizliliğine ve kişisel verilerinin korunmasına büyük önem veriyoruz. Bu politika, AnonimX mobil uygulamasını kullandığınızda verilerinizin nasıl işlendiğini ve korunduğunu açıklamaktadır.</p>
+  <div class="container">
 
-    <h2>1. Toplanan Veriler ve Kullanım Amaçları</h2>
-    <ul>
-      <li><strong>Hesap Bilgileri:</strong> Kayıt sırasında e-posta adresi, kullanıcı adı ve yaş doğrulaması (18 yaş sınırı) amacıyla doğum tarihi alınır.</li>
-      <li><strong>Kullanıcı İçeriği:</strong> Paylaştığınız hikayeler, profildeki fotoğraflar ve mesajlaşma içerikleri hizmetin sunulması amacıyla işlenir.</li>
-      <li><strong>Cihaz İzinleri (Kamera ve Mikrofon):</strong> Canlı görüntülü/sesli arama ve medya yükleme için kamera ve mikrofon erişimi yalnızca anlık onayınızla kullanılır. Canlı görüntülü aramalar sunucularda kaydedilmez ve depolanmaz.</li>
-    </ul>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link active">Gizlilik Politikası & Kurallar</a>
+      <a href="child-safety.html" class="nav-link" style="background: #fef2f2; color: #dc2626; border-color: #fecaca; font-weight: bold;">🛡️ Çocuk Güvenliği Standartları (CSAE)</a>
+      <a href="#delete-account" class="nav-link">🗑️ Hesap ve Veri Silme</a>
+    </div>
 
-    <h2>2. Kullanıcı Tarafından Oluşturulan İçerik (UGC) ve Topluluk Güvenliği</h2>
-    <p>AnonimX, topluluk güvenliğini korumak amacıyla "Sıfır Tolerans" politikası uygular. Taciz, tehdit, nefret söylemi, çıplaklık, yasa dışı veya rahatsız edici içerikler kesinlikle yasaktır. Kullanıcılar her profil, mesaj ve hikaye için yer alan "Şikayet Et" ve "Engelle" araçlarını anında kullanabilir. Bildirilen içerikler en geç 72 saat içinde incelenir ve kuralları ihlal eden hesaplar kalıcı olarak askıya alınır.</p>
+    <div class="header-card">
+      <h1>AnonimX: Kullanıcı Politikaları ve Güvenlik Standartları</h1>
+      <p style="margin: 0; color: #cbd5e1; font-size: 15px;">
+        Gizlilik Politikası, Çocuk Güvenliği Standartları (CSAE/CSAM) ve Hesap Yönetimi
+      </p>
 
-    <h2>3. İletişim</h2>
-    <p>Gizlilikle ilgili tüm sorularınız için: <a href="mailto:elciappsdev@gmail.com" style="color: #0284c7; font-weight: bold;">elciappsdev@gmail.com</a></p>
-  </div>
+      <div class="header-meta">
+        <div>
+          <span>Uygulama Adı / App Name</span>
+          <strong>AnonimX</strong>
+        </div>
+        <div>
+          <span>Geliştirici / Developer</span>
+          <strong>ElçiApps (Alican Elçi)</strong>
+        </div>
+        <div>
+          <span>Paket Adı / Package ID</span>
+          <strong>com.anonimx.app</strong>
+        </div>
+        <div>
+          <span>Son Güncelleme / Last Updated</span>
+          <strong>24 Kasım 2026</strong>
+        </div>
+      </div>
+    </div>
 
-  <div class="card" id="delete-account">
-    <h1>Hesap ve Veri Silme Talebi (Data Deletion)</h1>
-    <p>Google Play politikaları uyarınca, AnonimX hesabınızı ve hesabınıza bağlı tüm verileri hem uygulama içinden (Ayarlar menüsünden) hem de bu sayfa üzerinden kalıcı olarak sildirebilirsiniz.</p>
+    <!-- ÇOCUK GÜVENLİĞİ VE CSAE BÖLÜMÜ (GOOGLE PLAY ÖNCELİKLİ) -->
+    <div class="card" style="border-left: 6px solid #dc2626;">
+      <h2 style="color: #dc2626;">🛡️ Çocuk Güvenliği Standartları ve CSAE Sıfır Tolerans Politikası</h2>
+      <p><em>Child Safety Standards & Child Sexual Abuse and Exploitation (CSAE) Prevention Policy</em></p>
 
-    <div class="highlight">
-      <strong>Hangi veriler silinir?</strong>
+      <div class="alert-danger">
+        <strong>SIFIR TOLERANS POLİTİKASI (ZERO TOLERANCE):</strong><br>
+        <strong>ElçiApps</strong> tarafından geliştirilen ve yayınlanan <strong>AnonimX</strong> uygulamasında, <strong>Çocuğun Cinsel İstismarı ve İstismarı (CSAE - Child Sexual Abuse and Exploitation)</strong> ve <strong>Çocuğun Cinsel İstismarı Materyallerine (CSAM - Child Sexual Abuse Material)</strong> karşı kesin, tavizsiz ve sıfır toleranslı bir politika uygulanmaktadır.
+      </div>
+
+      <h3>Açık Yasaklar ve Kurallar</h3>
       <ul>
-        <li>Kullanıcı profiliniz (kullanıcı adı, e-posta, doğum tarihi, fotoğraflar ve biyografi).</li>
-        <li>Paylaştığınız hikayeler ve medya dosyaları.</li>
-        <li>Sohbet ve mesajlaşma kayıtları.</li>
+        <li>Her türlü çocuk cinsel istismarı materyalinin (CSAM) paylaşılması, yüklenmesi, talep edilmesi, barındırılması veya iletilmesi kesinlikle yasaktır.</li>
+        <li>Reşit olmayan bireylerle cinsel amaçlı iletişim kurma girişimleri (<strong>Child Grooming</strong>) kesinlikle yasaktır.</li>
+        <li>Reşit olmayan bireylere yönelik şantaj (<strong>Sextortion</strong>), tehdit veya çocuk ticareti girişimleri kesinlikle yasaktır.</li>
       </ul>
-      <p style="margin-bottom: 0; margin-top: 10px; font-size: 14px;"><em>Önemli Not: Silme talebinizin ardından hesabınız 90 günlük yasal güvenlik ve inceleme döngüsüne alınır, ardından veritabanlarımızdan kalıcı olarak imha edilir.</em></p>
+
+      <h3>18 Yaş Sınırı</h3>
+      <p>
+        <strong>AnonimX</strong> sadece 18 yaş ve üzeri yetişkinlerin kullanımına açıktır. Reşit olmayanların uygulamayı kullanması kesinlikle yasaktır. Reşit olmadığı tespit edilen hesaplar derhal kapatılır.
+      </p>
+
+      <h3>Denetim, Bildirim ve Yaptırımlar</h3>
+      <p>
+        Uygulama içerisindeki her mesaj, profil ve hikayede anında erişilebilir <strong>"Şikayet Et" (Report)</strong> ve <strong>"Engelle" (Block)</strong> mekanizmaları bulunmaktadır. Bildirilen ihlaller ivedilikle incelenir. Kuralı ihlal eden hesaplar kalıcı olarak silinir, IP ve cihazları bloke edilir.
+      </p>
+
+      <h3>Yasal Mercilere ve NCMEC'e Bildirim</h3>
+      <p>
+        Tespit edilen tüm CSAE/CSAM vakaları derhal <strong>NCMEC (National Center for Missing & Exploited Children)</strong> ve <strong>T.C. Emniyet Genel Müdürlüğü Siber Suçlarla Mücadele Daire Başkanlığı</strong> ile ilgili adli makamlara bildirilir.
+      </p>
+
+      <div class="contact-box">
+        <h4 style="margin: 0 0 10px 0; color: #0284c7;">Çocuk Güvenliği İletişim Kişisi / Child Safety Contact</h4>
+        <div class="contact-item"><strong>Uygulama:</strong> AnonimX</div>
+        <div class="contact-item"><strong>Geliştirici:</strong> ElçiApps (Alican Elçi)</div>
+        <div class="contact-item"><strong>Yetkili Güvenlik E-Postası:</strong> <a href="mailto:elci.kral@gmail.com" style="color: #0284c7; font-weight: bold;">elci.kral@gmail.com</a></div>
+        <div class="contact-item"><strong>Destek E-Postası:</strong> <a href="mailto:elciappsdev@gmail.com" style="color: #0284c7; font-weight: bold;">elciappsdev@gmail.com</a></div>
+        <div style="margin-top: 10px;">
+          <a href="child-safety.html" class="btn">Tam Çocuk Güvenliği Standartları Metnini Görüntüle →</a>
+        </div>
+      </div>
     </div>
 
-    <h2>Web Üzerinden Silme Talebi Gönderme</h2>
-    <p>Uygulamaya erişemiyorsanız veya hesabınızı dışarıdan sildirmek istiyorsanız, resmi veri silme formunu doldurabilir ya da doğrudan e-posta gönderebilirsiniz.</p>
+    <!-- GİZLİLİK POLİTİKASI -->
+    <div class="card">
+      <h2>🔒 AnonimX Gizlilik Politikası</h2>
+      <p><strong>ElçiApps</strong> ("biz") olarak <strong>AnonimX</strong> mobil uygulamamızda kullanıcılarımızın gizliliğine ve kişisel verilerinin korunmasına en üst düzeyde önem veriyoruz.</p>
 
-    <div class="btn-group">
-      <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfnTAXb0T9g1swMGqAwlm8p2vUgoJTkABXU7_d8AbZR9WZzZw/viewform" target="_blank">📝 Resmi Silme Formunu Doldur</a>
-      
-      <a class="btn btn-danger" href="mailto:elciappsdev@gmail.com?subject=AnonimX Hesap Silme Talebi&body=Merhaba,%0D%0A%0D%0AAnonimX hesabımın ve hesabıma bağlı tüm verilerin kalıcı olarak silinmesini talep ediyorum.%0D%0A%0D%0AKayıtlı Kullanıcı Adım: %0D%0AKayıtlı E-Posta Adresim: %0D%0A%0D%0ATalebi onaylıyorum.">✉️ E-Posta ile Talep Gönder</a>
+      <h3>1. Toplanan Veriler ve Kullanım Amaçları</h3>
+      <ul>
+        <li><strong>Hesap Bilgileri:</strong> Kayıt sırasında e-posta adresi, kullanıcı adı ve 18 yaş doğrulaması için doğum tarihi alınır.</li>
+        <li><strong>Kullanıcı İçeriği:</strong> Paylaştığınız hikayeler, profildeki fotoğraflar ve mesajlaşma içerikleri hizmetin sunulması amacıyla işlenir.</li>
+        <li><strong>Cihaz İzinleri (Kamera ve Mikrofon):</strong> Canlı görüntülü/sesli arama ve medya yükleme için kamera ve mikrofon erişimi yalnızca anlık onayınızla kullanılır. Canlı görüntülü aramalar sunucularda kaydedilmez ve depolanmaz.</li>
+      </ul>
+
+      <h3>2. Kullanıcı Tarafından Oluşturulan İçerik (UGC) ve Topluluk Güvenliği</h3>
+      <p>
+        AnonimX, topluluk güvenliğini korumak amacıyla "Sıfır Tolerans" politikası uygular. Taciz, tehdit, nefret söylemi, çıplaklık, yasa dışı veya rahatsız edici içerikler kesinlikle yasaktır. Kullanıcılar her profil, mesaj ve hikaye için yer alan "Şikayet Et" ve "Engelle" araçlarını anında kullanabilir. Bildirilen içerikler en geç 24-48 saat içinde incelenir ve kuralları ihlal eden hesaplar kalıcı olarak askıya alınır.
+      </p>
+
+      <h3>3. İletişim</h3>
+      <p>Gizlilikle ilgili tüm sorularınız için: <a href="mailto:elci.kral@gmail.com" style="color: #0284c7; font-weight: bold;">elci.kral@gmail.com</a> / <a href="mailto:elciappsdev@gmail.com" style="color: #0284c7; font-weight: bold;">elciappsdev@gmail.com</a></p>
     </div>
 
-    <p style="margin-top: 20px; font-size: 13px; color: #64748b;">
-      Gizlilikle ilgili tüm sorularınız ve veri silme talepleriniz en geç 72 saat içinde işleme alınır.
-    </p>
-  </div>
+    <!-- HESAP VE VERİ SİLME -->
+    <div class="card" id="delete-account">
+      <h2>🗑️ Hesap ve Veri Silme Talebi (Data Deletion)</h2>
+      <p>Google Play ve uluslararası veri koruma standartları uyarınca, <strong>AnonimX</strong> hesabınızı ve hesabınıza bağlı tüm verileri hem uygulama içinden (Ayarlar menüsünden) hem de bu sayfa üzerinden kalıcı olarak sildirebilirsiniz.</p>
 
-  <div class="footer">
-    &copy; 2026 AnonimX. Tüm hakları saklıdır.
+      <div class="highlight">
+        <strong>Hangi veriler silinir?</strong>
+        <ul>
+          <li>Kullanıcı profiliniz (kullanıcı adı, e-posta, doğum tarihi, fotoğraflar ve biyografi).</li>
+          <li>Paylaştığınız hikayeler ve medya dosyaları.</li>
+          <li>Sohbet ve mesajlaşma kayıtları.</li>
+        </ul>
+        <p style="margin-bottom: 0; margin-top: 10px; font-size: 14px;"><em>Önemli Not: Silme talebinizin ardından hesabınız 90 günlük yasal güvenlik ve inceleme döngüsüne alınır, ardından veritabanlarımızdan kalıcı olarak imha edilir.</em></p>
+      </div>
+
+      <h3>Web Üzerinden Silme Talebi Gönderme</h3>
+      <p>Uygulamaya erişemiyorsanız veya hesabınızı dışarıdan sildirmek istiyorsanız, resmi veri silme formunu doldurabilir ya da doğrudan e-posta gönderebilirsiniz.</p>
+
+      <div class="btn-group">
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfnTAXb0T9g1swMGqAwlm8p2vUgoJTkABXU7_d8AbZR9WZzZw/viewform" target="_blank">📝 Resmi Silme Formunu Doldur</a>
+        
+        <a class="btn btn-danger" href="mailto:elci.kral@gmail.com?subject=AnonimX Hesap Silme Talebi&body=Merhaba,%0D%0A%0D%0AAnonimX hesabımın ve hesabıma bağlı tüm verilerin kalıcı olarak silinmesini talep ediyorum.%0D%0A%0D%0AKayıtlı Kullanıcı Adım: %0D%0AKayıtlı E-Posta Adresim: %0D%0A%0D%0ATalebi onaylıyorum.">✉️ E-Posta ile Talep Gönder</a>
+      </div>
+
+      <p style="margin-top: 20px; font-size: 13px; color: #64748b;">
+        Gizlilikle ilgili tüm sorularınız ve veri silme talepleriniz en geç 48 saat içinde işleme alınır.
+      </p>
+    </div>
+
+    <div class="footer">
+      &copy; 2026 <strong>AnonimX</strong>. Geliştirici: <strong>ElçiApps</strong> (Alican Elçi). Tüm hakları saklıdır.
+    </div>
+
   </div>
 
 </body>

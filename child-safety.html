@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AnonimX - Çocuk Güvenliği Standartları ve CSAE Politikası | Child Safety Standards</title>
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-hover: #0369a1;
+      --danger: #dc2626;
+      --danger-bg: #fef2f2;
+      --dark: #0f172a;
+      --text: #1e293b;
+      --muted: #64748b;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      color: var(--text);
+      background-color: var(--bg);
+      margin: 0;
+      padding: 24px 16px;
+    }
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .header-card {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #ffffff;
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(239, 68, 68, 0.2);
+      color: #fca5a5;
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .header-card h1 {
+      margin: 0 0 12px 0;
+      font-size: 28px;
+      line-height: 1.3;
+      color: #ffffff;
+    }
+    .header-meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      font-size: 14px;
+    }
+    .header-meta div span {
+      color: #94a3b8;
+      display: block;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    .header-meta div strong {
+      color: #f8fafc;
+      font-size: 15px;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 14px;
+      padding: 32px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+      margin-bottom: 24px;
+      border: 1px solid var(--border);
+    }
+    h2 {
+      color: var(--dark);
+      font-size: 22px;
+      margin-top: 0;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    h3 {
+      color: #0369a1;
+      font-size: 18px;
+      margin-top: 24px;
+      margin-bottom: 10px;
+    }
+    p, li {
+      color: #334155;
+      font-size: 15px;
+    }
+    ul {
+      padding-left: 24px;
+      margin-bottom: 16px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .alert-danger {
+      background-color: var(--danger-bg);
+      border-left: 5px solid var(--danger);
+      padding: 16px 20px;
+      border-radius: 6px;
+      margin: 20px 0;
+      color: #991b1b;
+    }
+    .alert-danger strong {
+      color: #7f1d1d;
+    }
+    .contact-box {
+      background: #f0f9ff;
+      border: 2px solid #bae6fd;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 24px;
+    }
+    .contact-item {
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+    .contact-item strong {
+      color: #0369a1;
+      min-width: 140px;
+      display: inline-block;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--primary);
+      color: #ffffff;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+    .btn:hover { background-color: var(--primary-hover); }
+    .nav-links {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .nav-link {
+      color: #0284c7;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 8px 14px;
+      background: #ffffff;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .nav-link:hover {
+      background: #f1f5f9;
+    }
+    .nav-link.active {
+      background: #0284c7;
+      color: #ffffff;
+      border-color: #0284c7;
+    }
+    .lang-divider {
+      border: 0;
+      height: 2px;
+      background: #e2e8f0;
+      margin: 40px 0;
+    }
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 40px;
+      padding-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">← Gizlilik & Ana Sayfa</a>
+      <a href="child-safety.html" class="nav-link active">🛡️ Çocuk Güvenliği Standartları (CSAE)</a>
+      <a href="index.html#delete-account" class="nav-link">🗑️ Hesap & Veri Silme</a>
+    </div>
+
+    <div class="header-card">
+      <div class="badge">Google Play Politika Uyumluluğu</div>
+      <h1>AnonimX: Çocuk Güvenliği Standartları ve CSAE Sıfır Tolerans Politikası</h1>
+      <p style="margin: 0; color: #cbd5e1; font-size: 15px;">
+        Child Safety Standards & Child Sexual Abuse and Exploitation (CSAE) / CSAM Prevention Policy
+      </p>
+
+      <div class="header-meta">
+        <div>
+          <span>Uygulama Adı / App Name</span>
+          <strong>AnonimX</strong>
+        </div>
+        <div>
+          <span>Geliştirici / Developer</span>
+          <strong>ElçiApps (Alican Elçi)</strong>
+        </div>
+        <div>
+          <span>Paket Adı / Package ID</span>
+          <strong>com.anonimx.app</strong>
+        </div>
+        <div>
+          <span>Son Güncelleme / Last Updated</span>
+          <strong>24 Kasım 2026</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- TÜRKÇE BÖLÜM -->
+    <div class="card">
+      <h2>1. Çocuğun Cinsel İstismarı ve Sömürüsüne (CSAE / CSAM) Karşı Sıfır Tolerans</h2>
+      
+      <div class="alert-danger">
+        <strong>KESİN VE TAVİZSİZ YASAK (SIFIR TOLERANS):</strong><br>
+        <strong>ElçiApps</strong> tarafından geliştirilen <strong>AnonimX</strong> uygulamasında, Çocuğun Cinsel İstismarı ve İstismarı (CSAE - Child Sexual Abuse and Exploitation) ile Çocuğun Cinsel İstismarı Materyallerine (CSAM - Child Sexual Abuse Material) karşı tavizsiz ve sıfır tolerans (zero tolerance) politikası uygulanır.
+      </div>
+
+      <p>Aşağıdaki eylemler ve içerikler AnonimX platformunda kesin surette yasaklanmıştır:</p>
+      <ul>
+        <li>Her türlü çocuk cinsel istismarı materyalinin (CSAM) üretimi, yüklenmesi, paylaşımı, dağıtımı, talep edilmesi veya bağlantısının iletilmesi.</li>
+        <li>Çocuklara yönelik cinsel istismar, cinsel ilişki veya sömürü tasvirleri, metinleri, görselleri veya ses kayıtları.</li>
+        <li><strong>Çocuk Kandırma ve Ayartma (Grooming):</strong> Reşit olmayan bireylerle cinsel amaçlı iletişim kurma, güven kazanmaya çalışma veya buluşma teklif etme girişimleri.</li>
+        <li><strong>Cinsel Şantaj (Sextortion):</strong> Reşit olmayan bir bireyi cinsel görüntüler veya bilgiler üzerinden tehdit etme veya şantaj yapma.</li>
+        <li>Çocuk ticareti veya çocukların cinsel sömürü amaçlı ticari amaçlarla kullanılmasına yönelik her türlü teşebbüs.</li>
+      </ul>
+
+      <h3>2. Yaş Sınırı Politikası (18+)</h3>
+      <p>
+        <strong>AnonimX</strong> münhasıran <strong>18 yaş ve üzeri</strong> yetişkin kullanıcılar için tasarlanmış bir sosyal etkileşim ve anonim mesajlaşma platformudur. 18 yaşın altındaki bireylerin hesap oluşturması, uygulamayı kullanması kesinlikle yasaktır. Kayıt aşamasında yaş beyanı zorunludur ve reşit olmadığı anlaşılan hesaplar hiçbir uyarı yapılmaksızın derhal kapatılır.
+      </p>
+
+      <h3>3. Uygulama İçi Bildirim ve Moderasyon Mekanizmaları</h3>
+      <p>Uygulamamız kullanıcıların güvenliğini temin etmek için çok katmanlı denetim mekanizmaları barındırır:</p>
+      <ul>
+        <li><strong>Her Alanda Şikayet Butonu:</strong> Kullanıcılar, her sohbet penceresinde, her kullanıcı profilinde ve paylaşılan her hikaye/gönderide yer alan "Şikayet Et (Report)" butonu vasıtasıyla anında ihlal bildiriminde bulunabilir.</li>
+        <li><strong>Anında Engelleme:</strong> Kullanıcılar rahatsız edici buldukları herhangi bir kullanıcıyı tek tıkla engelleyebilir.</li>
+        <li><strong>7/24 Öncelikli İnceleme:</strong> Çocuk güvenliği, CSAE veya istismar şüphesi taşıyan tüm bildirimler en yüksek öncelik derecesiyle derhal incelenir.</li>
+        <li><strong>Yaptırımlar:</strong> CSAE/CSAM kuralını ihlal eden kullanıcının hesabı anında kalıcı olarak silinir, IP adresi ve cihaz kimliği bloke edilir ve sistemden tamamen men edilir.</li>
+      </ul>
+
+      <h3>4. Yasal Mercilere Bildirim ve NCMEC İş Birliği</h3>
+      <p>
+        ElçiApps, CSAE/CSAM ihlallerini yalnızca uygulama içinde cezalandırmakla kalmaz; tespit edilen veya bildirilen tüm çocuk istismarı vakalarını ivedilikle <strong>Ulusal Kayıp ve İstismara Uğramış Çocuklar Merkezi'ne (NCMEC - National Center for Missing & Exploited Children)</strong> ve Türkiye Cumhuriyeti <strong>Emniyet Genel Müdürlüğü Siber Suçlarla Mücadele Daire Başkanlığı</strong> ile yetkili adli mercilere eksiksiz olarak raporlar.
+      </p>
+
+      <div class="contact-box">
+        <h3 style="margin-top: 0; color: #0284c7;">📞 Çocuk Güvenliği Yetkilisi ve İletişim Bilgileri</h3>
+        <p style="margin-bottom: 16px; font-size: 14px; color: #334155;">
+          Çocuk güvenliği, CSAE ihlalleri veya acil güvenlik şikayetleri için doğrudan yetkili ekibimizle 7/24 iletişime geçebilirsiniz. Bu kanala gelen talepler en geç 24 saat içinde yanıtlanır.
+        </p>
+        <div class="contact-item">
+          <strong>Uygulama:</strong> AnonimX (com.anonimx.app)
+        </div>
+        <div class="contact-item">
+          <strong>Geliştirici Kuruluş:</strong> ElçiApps
+        </div>
+        <div class="contact-item">
+          <strong>Yetkili İletişim Kişisi:</strong> Alican Elçi (Child Safety Officer)
+        </div>
+        <div class="contact-item">
+          <strong>Doğrudan E-Posta:</strong> <a href="mailto:elci.kral@gmail.com" style="color: #0284c7; font-weight: bold;">elci.kral@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <strong>Geliştirici Destek E-Postası:</strong> <a href="mailto:elciappsdev@gmail.com" style="color: #0284c7; font-weight: bold;">elciappsdev@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="lang-divider">
+
+    <!-- ENGLISH SECTION FOR GOOGLE REVIEWERS -->
+    <div class="card">
+      <h2>English: Child Safety Standards & CSAE Zero Tolerance Policy</h2>
+      
+      <div class="alert-danger">
+        <strong>STRICT ZERO TOLERANCE POLICY:</strong><br>
+        <strong>ElçiApps</strong> strictly prohibits Child Sexual Abuse Material (CSAM) and Child Sexual Abuse and Exploitation (CSAE) on <strong>AnonimX</strong>. We maintain an uncompromising zero-tolerance policy towards any content or conduct that threatens children.
+      </div>
+
+      <h3>1. Explicit Prohibitions</h3>
+      <p>The following activities are strictly prohibited on AnonimX:</p>
+      <ul>
+        <li>Any uploading, publishing, requesting, sharing, storing, or transmission of Child Sexual Abuse Material (CSAM).</li>
+        <li>Child sexual exploitation and abuse (CSAE) in any form (images, videos, text, or audio).</li>
+        <li><strong>Child Grooming:</strong> Attempting to build emotional connections with minors for sexual exploitation, solicit illicit interactions, or arrange real-life meetings.</li>
+        <li><strong>Sextortion:</strong> Threatening, coercing, or blackmailing minors using personal or sexual materials.</li>
+        <li>Child trafficking or commercial sexual exploitation involving minors.</li>
+      </ul>
+
+      <h3>2. Age Limitation (Strictly 18+)</h3>
+      <p>
+        <strong>AnonimX</strong> is strictly an 18+ adult social communication platform. Individuals under the age of 18 are strictly prohibited from using the service or creating an account. Any account discovered to belong to a minor is terminated immediately.
+      </p>
+
+      <h3>3. In-App Reporting, Swift Moderation & Enforcement</h3>
+      <ul>
+        <li><strong>Ubiquitous In-App Reporting:</strong> Every chat window, user profile, and story/post features an easily accessible "Report" and "Block" mechanism.</li>
+        <li><strong>Immediate Account Termination:</strong> Any user found violating CSAE/CSAM guidelines is immediately permanently banned, and their device and IP address are blacklisted.</li>
+        <li><strong>24/7 Review Queue:</strong> All child safety reports are routed with the highest priority to our review team.</li>
+      </ul>
+
+      <h3>4. Law Enforcement Reporting & NCMEC Cooperation</h3>
+      <p>
+        In accordance with international standards and local legislation, ElçiApps immediately reports all identified instances of CSAM and CSAE to the <strong>National Center for Missing & Exploited Children (NCMEC)</strong> and relevant law enforcement agencies.
+      </p>
+
+      <div class="contact-box">
+        <h3 style="margin-top: 0; color: #0284c7;">Designated Child Safety Contact Point</h3>
+        <div class="contact-item">
+          <strong>Application:</strong> AnonimX
+        </div>
+        <div class="contact-item">
+          <strong>Developer:</strong> ElçiApps
+        </div>
+        <div class="contact-item">
+          <strong>Contact Officer:</strong> Alican Elçi
+        </div>
+        <div class="contact-item">
+          <strong>Primary Safety Email:</strong> <a href="mailto:elci.kral@gmail.com" style="color: #0284c7; font-weight: bold;">elci.kral@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <strong>Secondary Support Email:</strong> <a href="mailto:elciappsdev@gmail.com" style="color: #0284c7; font-weight: bold;">elciappsdev@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      &copy; 2026 <strong>AnonimX</strong> by <strong>ElçiApps</strong> (Alican Elçi). All rights reserved.
+    </div>
+
+  </div>
+
+</body>
+</html>
