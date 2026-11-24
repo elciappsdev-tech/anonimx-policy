@@ -121,6 +121,15 @@
     .alert-danger strong {
       color: #7f1d1d;
     }
+    .legal-box {
+      background-color: #f1f5f9;
+      border-left: 5px solid #64748b;
+      padding: 18px 20px;
+      border-radius: 6px;
+      margin: 20px 0;
+      color: #334155;
+      font-size: 14px;
+    }
     .contact-box {
       background: #f0f9ff;
       border: 2px solid #bae6fd;
@@ -137,20 +146,6 @@
       min-width: 140px;
       display: inline-block;
     }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background-color: var(--primary);
-      color: #ffffff;
-      padding: 12px 20px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 14px;
-      transition: background 0.2s;
-    }
-    .btn:hover { background-color: var(--primary-hover); }
     .nav-links {
       display: flex;
       gap: 12px;
@@ -233,7 +228,7 @@
       
       <div class="alert-danger">
         <strong>KESİN VE TAVİZSİZ YASAK (SIFIR TOLERANS):</strong><br>
-        <strong>ElçiApps</strong> tarafından geliştirilen <strong>AnonimX</strong> uygulamasında, Çocuğun Cinsel İstismarı ve İstismarı (CSAE - Child Sexual Abuse and Exploitation) ile Çocuğun Cinsel İstismarı Materyallerine (CSAM - Child Sexual Abuse Material) karşı tavizsiz ve sıfır tolerans (zero tolerance) politikası uygulanır.
+        <strong>ElçiApps</strong> tarafından sunulan <strong>AnonimX</strong> platformunda, Çocuğun Cinsel İstismarı ve İstismarı (CSAE - Child Sexual Abuse and Exploitation) ile Çocuğun Cinsel İstismarı Materyallerine (CSAM - Child Sexual Abuse Material) karşı tavizsiz ve sıfır tolerans (zero tolerance) politikası uygulanır. Bu tür içerik ve davranışlara platformda hiçbir surette yer verilmez.
       </div>
 
       <p>Aşağıdaki eylemler ve içerikler AnonimX platformunda kesin surette yasaklanmıştır:</p>
@@ -247,42 +242,44 @@
 
       <h3>2. Yaş Sınırı Politikası (18+)</h3>
       <p>
-        <strong>AnonimX</strong> münhasıran <strong>18 yaş ve üzeri</strong> yetişkin kullanıcılar için tasarlanmış bir sosyal etkileşim ve anonim mesajlaşma platformudur. 18 yaşın altındaki bireylerin hesap oluşturması, uygulamayı kullanması kesinlikle yasaktır. Kayıt aşamasında yaş beyanı zorunludur ve reşit olmadığı anlaşılan hesaplar hiçbir uyarı yapılmaksızın derhal kapatılır.
+        <strong>AnonimX</strong> münhasıran <strong>18 yaş ve üzeri</strong> yetişkin kullanıcılar için tasarlanmış bir sosyal etkileşim ve anonim mesajlaşma platformudur. 18 yaşın altındaki bireylerin hesap oluşturması, uygulamayı kullanması kesinlikle yasaktır. Reşit olmadığı tespit edilen veya bildirilen hesaplar derhal kapatılır.
       </p>
 
-      <h3>3. Uygulama İçi Bildirim ve Moderasyon Mekanizmaları</h3>
-      <p>Uygulamamız kullanıcıların güvenliğini temin etmek için çok katmanlı denetim mekanizmaları barındırır:</p>
+      <h3>3. Uygulama İçi Bildirim ve Uyar-Kaldır Mekanizması</h3>
+      <p>Kullanıcılarımızın güvenliğini sağlamak amacıyla etkin şikayet ve bildirim araçları sunulmaktadır:</p>
       <ul>
-        <li><strong>Her Alanda Şikayet Butonu:</strong> Kullanıcılar, her sohbet penceresinde, her kullanıcı profilinde ve paylaşılan her hikaye/gönderide yer alan "Şikayet Et (Report)" butonu vasıtasıyla anında ihlal bildiriminde bulunabilir.</li>
-        <li><strong>Anında Engelleme:</strong> Kullanıcılar rahatsız edici buldukları herhangi bir kullanıcıyı tek tıkla engelleyebilir.</li>
-        <li><strong>7/24 Öncelikli İnceleme:</strong> Çocuk güvenliği, CSAE veya istismar şüphesi taşıyan tüm bildirimler en yüksek öncelik derecesiyle derhal incelenir.</li>
-        <li><strong>Yaptırımlar:</strong> CSAE/CSAM kuralını ihlal eden kullanıcının hesabı anında kalıcı olarak silinir, IP adresi ve cihaz kimliği bloke edilir ve sistemden tamamen men edilir.</li>
+        <li><strong>Şikayet ve Engelleme Butonları:</strong> Her sohbet penceresinde, kullanıcı profilinde ve paylaşılan hikayelerde yer alan "Şikayet Et" ve "Engelle" butonları ile kullanıcılar her an bildirimde bulunabilir.</li>
+        <li><strong>Öncelikli Değerlendirme:</strong> Çocuk güvenliği veya CSAE/CSAM şüphesi taşıyan tüm ihbar ve şikayetler en yüksek öncelikle ele alınır.</li>
+        <li><strong>Yaptırımlar:</strong> Kural ihlali tespit edildiğinde, ihlale konu içerik derhal kaldırılır, ilgili kullanıcının hesabı kalıcı olarak kapatılır ve platforma erişimi engellenir.</li>
+        <li><strong>Yasal Raporlama:</strong> Tespit edilen veya doğrulanmış CSAE/CSAM vakaları <strong>NCMEC (National Center for Missing & Exploited Children)</strong> ve ilgili adli/emniyet makamlarına bildirilir.</li>
       </ul>
 
-      <h3>4. Yasal Mercilere Bildirim ve NCMEC İş Birliği</h3>
-      <p>
-        ElçiApps, CSAE/CSAM ihlallerini yalnızca uygulama içinde cezalandırmakla kalmaz; tespit edilen veya bildirilen tüm çocuk istismarı vakalarını ivedilikle <strong>Ulusal Kayıp ve İstismara Uğramış Çocuklar Merkezi'ne (NCMEC - National Center for Missing & Exploited Children)</strong> ve Türkiye Cumhuriyeti <strong>Emniyet Genel Müdürlüğü Siber Suçlarla Mücadele Daire Başkanlığı</strong> ile yetkili adli mercilere eksiksiz olarak raporlar.
-      </p>
+      <!-- HUKUKİ YER SAĞLAYICI VE SORUMLULUK REDDİ MADDESİ (ALİCAN'I KORUYAN ZIRH) -->
+      <h3>4. Hukuki Statü, Yer Sağlayıcı Beyanı ve Sorumluluk Sınırı (Safe Harbor)</h3>
+      <div class="legal-box">
+        <strong>⚖️ YASAL BİLGİLENDİRME VE SORUMLULUK MUAFİYETİ (5651 Sayılı Kanun & Uluslararası Mevzuat):</strong><br><br>
+        1. <strong>Yer Sağlayıcı Statüsü:</strong> AnonimX ve geliştirici ElçiApps (Alican Elçi), 5651 sayılı "İnternet Ortamında Yapılan Yayınların Düzenlenmesi ve Bu Yayınlar Yoluyla İşlenen Suçlarla Mücadele Edilmesi Hakkında Kanun" ve uluslararası eşdeğer mevzuatlar (örneğin ABD CDA Section 230 ve AB Dijital Hizmetler Yasası - DSA) kapsamında bir <strong>"Yer Sağlayıcı" (Hosting Provider / Intermediary)</strong> konumundadır.<br><br>
+        2. <strong>Önceden Denetleme Yükümlülüğünün Bulunmaması:</strong> 5651 sayılı Kanun'un 5. maddesi uyarınca yer sağlayıcı, <em>"yer sağladığı içeriği kontrol etmek veya hukuka aykırı bir faaliyetin söz konusu olup olmadığını araştırmakla yükümlü değildir."</em> AnonimX platformunda kullanıcılar tarafından anlık olarak paylaşılan mesaj, medya veya içeriklerin tamamının önceden taranması, canlı olarak izlenmesi veya içeriğe dair peşin garanti verilmesi teknik ve hukuki olarak mümkün değildir ve geliştiricinin böyle bir yükümlülüğü bulunmamaktadır.<br><br>
+        3. <strong>Bireysel Kullanıcı Sorumluluğu:</strong> Platform üzerinde oluşturulan, paylaşılan veya iletilen her türlü içeriğin cezai ve hukuki sorumluluğu münhasıran ve tamamen söz konusu içeriği oluşturan kullanıcıya aittir.<br><br>
+        4. <strong>Uyar-Kaldır (Notice and Takedown) İlkesi:</strong> Geliştirici, kendisine usulüne uygun şekilde bildirilen veya haberdar olduğu hukuka aykırı içerikleri teknik imkanlar dahilinde ve makul olan en kısa sürede yayından kaldırmakla ve gerekli idari tedbirleri almakla yükümlüdür.
+      </div>
 
       <div class="contact-box">
-        <h3 style="margin-top: 0; color: #0284c7;">📞 Çocuk Güvenliği Yetkilisi ve İletişim Bilgileri</h3>
+        <h3 style="margin-top: 0; color: #0284c7;">📞 Çocuk Güvenliği ve İhlal Bildirim İletişimi</h3>
         <p style="margin-bottom: 16px; font-size: 14px; color: #334155;">
-          Çocuk güvenliği, CSAE ihlalleri veya acil güvenlik şikayetleri için doğrudan yetkili ekibimizle 7/24 iletişime geçebilirsiniz. Bu kanala gelen talepler en geç 24 saat içinde yanıtlanır.
+          Çocuk güvenliği sorunları veya acil şikayetler için aşağıdaki iletişim kanalı üzerinden doğrudan bildirimde bulunabilirsiniz. Bildirimler öncelikli olarak değerlendirilir.
         </p>
         <div class="contact-item">
           <strong>Uygulama:</strong> AnonimX (com.anonimx.app)
         </div>
         <div class="contact-item">
-          <strong>Geliştirici Kuruluş:</strong> ElçiApps
+          <strong>Geliştirici / Yer Sağlayıcı:</strong> ElçiApps (Alican Elçi)
         </div>
         <div class="contact-item">
-          <strong>Yetkili İletişim Kişisi:</strong> Alican Elçi (Child Safety Officer)
+          <strong>Güvenlik İletişim E-Postası:</strong> <a href="mailto:elci.kral@gmail.com" style="color: #0284c7; font-weight: bold;">elci.kral@gmail.com</a>
         </div>
         <div class="contact-item">
-          <strong>Doğrudan E-Posta:</strong> <a href="mailto:elci.kral@gmail.com" style="color: #0284c7; font-weight: bold;">elci.kral@gmail.com</a>
-        </div>
-        <div class="contact-item">
-          <strong>Geliştirici Destek E-Postası:</strong> <a href="mailto:elciappsdev@gmail.com" style="color: #0284c7; font-weight: bold;">elciappsdev@gmail.com</a>
+          <strong>Destek E-Postası:</strong> <a href="mailto:elciappsdev@gmail.com" style="color: #0284c7; font-weight: bold;">elciappsdev@gmail.com</a>
         </div>
       </div>
     </div>
@@ -295,52 +292,53 @@
       
       <div class="alert-danger">
         <strong>STRICT ZERO TOLERANCE POLICY:</strong><br>
-        <strong>ElçiApps</strong> strictly prohibits Child Sexual Abuse Material (CSAM) and Child Sexual Abuse and Exploitation (CSAE) on <strong>AnonimX</strong>. We maintain an uncompromising zero-tolerance policy towards any content or conduct that threatens children.
+        <strong>ElçiApps</strong> strictly prohibits Child Sexual Abuse Material (CSAM) and Child Sexual Abuse and Exploitation (CSAE) on <strong>AnonimX</strong>. We enforce an uncompromising zero-tolerance policy against any prohibited content or abusive conduct involving minors.
       </div>
 
       <h3>1. Explicit Prohibitions</h3>
-      <p>The following activities are strictly prohibited on AnonimX:</p>
+      <p>The following activities and contents are strictly prohibited on AnonimX:</p>
       <ul>
-        <li>Any uploading, publishing, requesting, sharing, storing, or transmission of Child Sexual Abuse Material (CSAM).</li>
+        <li>Any production, uploading, publishing, requesting, sharing, storing, or transmission of Child Sexual Abuse Material (CSAM).</li>
         <li>Child sexual exploitation and abuse (CSAE) in any form (images, videos, text, or audio).</li>
-        <li><strong>Child Grooming:</strong> Attempting to build emotional connections with minors for sexual exploitation, solicit illicit interactions, or arrange real-life meetings.</li>
+        <li><strong>Child Grooming:</strong> Attempting to build connections with minors for sexual exploitation or illicit solicitation.</li>
         <li><strong>Sextortion:</strong> Threatening, coercing, or blackmailing minors using personal or sexual materials.</li>
-        <li>Child trafficking or commercial sexual exploitation involving minors.</li>
+        <li>Child trafficking or commercial exploitation involving minors.</li>
       </ul>
 
-      <h3>2. Age Limitation (Strictly 18+)</h3>
+      <h3>2. Age Requirement (Strictly 18+)</h3>
       <p>
-        <strong>AnonimX</strong> is strictly an 18+ adult social communication platform. Individuals under the age of 18 are strictly prohibited from using the service or creating an account. Any account discovered to belong to a minor is terminated immediately.
+        <strong>AnonimX</strong> is strictly an 18+ adult social communication platform. Individuals under the age of 18 are prohibited from using the service. Accounts identified as belonging to minors are terminated upon detection.
       </p>
 
-      <h3>3. In-App Reporting, Swift Moderation & Enforcement</h3>
+      <h3>3. In-App Reporting & Notice-and-Takedown</h3>
       <ul>
-        <li><strong>Ubiquitous In-App Reporting:</strong> Every chat window, user profile, and story/post features an easily accessible "Report" and "Block" mechanism.</li>
-        <li><strong>Immediate Account Termination:</strong> Any user found violating CSAE/CSAM guidelines is immediately permanently banned, and their device and IP address are blacklisted.</li>
-        <li><strong>24/7 Review Queue:</strong> All child safety reports are routed with the highest priority to our review team.</li>
+        <li><strong>Reporting Tools:</strong> Every chat window, user profile, and story features an easily accessible "Report" and "Block" mechanism for real-time reporting.</li>
+        <li><strong>Swift Action:</strong> Violating content reported through in-app mechanisms or official contact is investigated with top priority. Confirmed violations result in immediate removal, permanent account termination, and device/IP blocking.</li>
+        <li><strong>Law Enforcement & NCMEC:</strong> Confirmed instances of CSAM/CSAE are reported to the <strong>National Center for Missing & Exploited Children (NCMEC)</strong> and relevant authorities.</li>
       </ul>
 
-      <h3>4. Law Enforcement Reporting & NCMEC Cooperation</h3>
-      <p>
-        In accordance with international standards and local legislation, ElçiApps immediately reports all identified instances of CSAM and CSAE to the <strong>National Center for Missing & Exploited Children (NCMEC)</strong> and relevant law enforcement agencies.
-      </p>
+      <h3>4. Intermediary Status & Limitation of Liability (Safe Harbor)</h3>
+      <div class="legal-box">
+        <strong>LEGAL DISCLAIMER & INTERMEDIARY LIABILITY:</strong><br><br>
+        1. <strong>Intermediary / Hosting Provider Status:</strong> AnonimX operates solely as an intermediary service provider / hosting provider under applicable internet regulations (including Turkish Law No. 5651, US CDA Section 230, and EU Digital Services Act principles).<br><br>
+        2. <strong>No General Monitoring Obligation:</strong> As an intermediary platform provider, the developer does not and is not legally obligated to actively monitor, screen, or pre-moderate all user-generated communications in real-time.<br><br>
+        3. <strong>User Responsibility:</strong> Each individual user bears sole legal and criminal liability for the communications, files, and content they generate or distribute through the service.<br><br>
+        4. <strong>Notice and Takedown:</strong> The developer strictly operates under a proactive notice-and-takedown standard: upon receipt of a valid report or actual notice of infringing activity, the developer acts expeditiously within reasonable technical and administrative capacity to disable or remove the infringing material.
+      </div>
 
       <div class="contact-box">
         <h3 style="margin-top: 0; color: #0284c7;">Designated Child Safety Contact Point</h3>
         <div class="contact-item">
-          <strong>Application:</strong> AnonimX
+          <strong>Application:</strong> AnonimX (com.anonimx.app)
         </div>
         <div class="contact-item">
-          <strong>Developer:</strong> ElçiApps
+          <strong>Developer / Provider:</strong> ElçiApps (Alican Elçi)
         </div>
         <div class="contact-item">
-          <strong>Contact Officer:</strong> Alican Elçi
+          <strong>Safety Contact Email:</strong> <a href="mailto:elci.kral@gmail.com" style="color: #0284c7; font-weight: bold;">elci.kral@gmail.com</a>
         </div>
         <div class="contact-item">
-          <strong>Primary Safety Email:</strong> <a href="mailto:elci.kral@gmail.com" style="color: #0284c7; font-weight: bold;">elci.kral@gmail.com</a>
-        </div>
-        <div class="contact-item">
-          <strong>Secondary Support Email:</strong> <a href="mailto:elciappsdev@gmail.com" style="color: #0284c7; font-weight: bold;">elciappsdev@gmail.com</a>
+          <strong>Support Email:</strong> <a href="mailto:elciappsdev@gmail.com" style="color: #0284c7; font-weight: bold;">elciappsdev@gmail.com</a>
         </div>
       </div>
     </div>
